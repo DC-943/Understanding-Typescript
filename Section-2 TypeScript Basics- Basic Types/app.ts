@@ -1,15 +1,15 @@
-// const person: {
-//   name: string
-//   age: number
-// } =
+let userInput: unkonwn
+let userName: string
 
-const person = {
-  name: "MAX",
-  age: 30,
-  hobbies: ["Sports", "Cooking"],
+userInput = 5
+userInput = "Max"
+if (typeof userInput === "string") {
+  userName = userInput
 }
 
-let favoriteActivities: string[]
-favoriteActivities = ["Sports"]
+function generateError(message: string, code: number): never {
+  throw { message: message, errorCode: code }
+}
 
-console.log(person.name)
+const result = generateError("An error occurred!", 500)
+console.log(result)
